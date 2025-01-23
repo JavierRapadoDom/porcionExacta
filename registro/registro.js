@@ -21,7 +21,7 @@ function registrarUsuario () {
 
 
 
-    fetch('backporcionexacta-production.up.railway.app/api/usuarios/create', {
+    fetch('https://backporcionexacta-production.up.railway.app/api/usuarios/create', {
         method: 'POST', // Especificamos el mÃ©todo de la peticiÃ³n
         headers: {
           'Content-Type': 'application/json' // Indicamos que los datos estÃ¡n en formato JSON
