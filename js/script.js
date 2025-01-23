@@ -32,7 +32,7 @@ function repositionAddRecipeCard() {
 
 
 function eliminarIngrediente(id, id_receta){
-    const url = 'http://localhost:8080/api/ingredientes/delete?id_ingrediente=' + id;
+    const url = 'https://backporcionexacta-production.up.railway.app:8080/api/ingredientes/delete?id_ingrediente=' + id;
         fetch(url, {  
             method: 'DELETE'
               
@@ -65,7 +65,7 @@ function añadirIngrediente(id_receta){
         };
         console.log("Ingrediente: ", ingrediente_a_añadir)
     
-        fetch(`http://localhost:8080/api/ingredientes/create?id_receta=${id_receta}`, {
+        fetch(`https://backporcionexacta-production.up.railway.app:8080/api/ingredientes/create?id_receta=${id_receta}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             // Enviar los datos al backend
-            const response = await fetch("http://localhost:8080/api/usuarios/login", {
+            const response = await fetch("https://backporcionexacta-production.up.railway.app:8080/api/usuarios/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const result = await response.json();
                 
                 // Redirigir con la ID del usuario como parámetro en la URL
-                window.location.href = `http://127.0.0.1:5500/principal.html?id=${result.id}`;
+                window.location.href = `https://porcionexacta.netlify.app/principal?id=${result.id}`;
 
 
             } else if (response.status === 401) {

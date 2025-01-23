@@ -45,7 +45,7 @@ function mostrarDetallesYCalcular(receta) {
         }
 
         // Obtener los ingredientes de la receta desde el backend
-        fetch(`http://localhost:8080/api/ingredientes/getIngredientes?id_receta=${receta.id}`)
+        fetch(`https://backporcionexacta-production.up.railway.app:8080/api/ingredientes/getIngredientes?id_receta=${receta.id}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Error al obtener los ingredientes.');
