@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         try {
             // Enviar los datos al backend
-            const response = await fetch("https://backporcionexacta-production.up.railway.app:8080/api/usuarios/login", {
+            const response = await fetch("https://backporcionexacta-production.up.railway.app/api/usuarios/login", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

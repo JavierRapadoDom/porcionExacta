@@ -65,7 +65,7 @@ function añadirIngrediente(id_receta){
         };
         console.log("Ingrediente: ", ingrediente_a_añadir)
     
-        fetch(`https://backporcionexacta-production.up.railway.app:8080/api/ingredientes/create?id_receta=${id_receta}`, {
+        fetch(`https://backporcionexacta-production.up.railway.app/api/ingredientes/create?id_receta=${id_receta}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -123,7 +123,7 @@ function añadirIngredienteEditar(id_receta){
          };
          console.log("Ingrediente: ", ingrediente_a_añadir)
      
-         fetch(`http://localhost:8080/api/ingredientes/create?id_receta=${id_receta}`, {
+         fetch(`https://backporcionexacta-production.up.railway.app/api/ingredientes/create?id_receta=${id_receta}`, {
              method: 'POST',
              headers: {
                  'Content-Type': 'application/json'
@@ -277,7 +277,7 @@ function formEditarReceta(id_receta){
 
 
 function updateReceta(id_receta, receta){
-    const url = 'http://localhost:8080/api/recetas/update?id=' + id_receta;
+    const url = 'https://backporcionexacta-production.up.railway.app/api/recetas/update?id=' + id_receta;
         fetch(url, {  
             method: 'PUT',
             headers: {
@@ -303,7 +303,7 @@ function updateReceta(id_receta, receta){
 function eliminarReceta(id_receta){
    
     if (confirm('¿Estás seguro de que deseas borrar esta receta?')) {
-        const url = 'http://localhost:8080/api/recetas/delete?id=' + id_receta;
+        const url = 'https://backporcionexacta-production.up.railway.app/api/recetas/delete?id=' + id_receta;
         fetch(url, {  
             method: 'DELETE'
               
@@ -355,7 +355,7 @@ recipeContainer.addEventListener('click', (event) => {
 
 
 function getListaIngredientesVisualizar(id_receta){
-    fetch(`http://localhost:8080/api/ingredientes/getIngredientes?id_receta=${id_receta}`, {  
+    fetch(`https://backporcionexacta-production.up.railway.app/api/ingredientes/getIngredientes?id_receta=${id_receta}`, {  
         method: 'GET'   
     })  
         .then(response => {  
@@ -374,7 +374,7 @@ function getListaIngredientesVisualizar(id_receta){
 
 
 function getListaIngredientesAñadir(id_receta){
-    fetch(`http://localhost:8080/api/ingredientes/getIngredientes?id_receta=${id_receta}`, {  
+    fetch(`https://backporcionexacta-production.up.railway.app/api/ingredientes/getIngredientes?id_receta=${id_receta}`, {  
         method: 'GET'   
     })  
         .then(response => {  
@@ -392,7 +392,7 @@ function getListaIngredientesAñadir(id_receta){
 }
 
 function getListaIngredientesEditar(id_receta){
-    fetch(`http://localhost:8080/api/ingredientes/getIngredientes?id_receta=${id_receta}`, {  
+    fetch(`https://backporcionexacta-production.up.railway.app/api/ingredientes/getIngredientes?id_receta=${id_receta}`, {  
         method: 'GET'   
     })  
         .then(response => {  
@@ -542,7 +542,7 @@ function guardarReceta() {
         pasos: $('#recipeSteps').val().trim(),
     };
 
-    fetch(`http://localhost:8080/api/recetas/create?id_usuario=${userId}`, {
+    fetch(`https://backporcionexacta-production.up.railway.app/api/recetas/create?id_usuario=${userId}`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -638,7 +638,7 @@ function receta_a_Ingrediente_editar(id_receta){
 */
 
 function obtenerRecetaById(id_receta){
-    fetch(`http://localhost:8080/api/recetas/getRecetaById?id=${id_receta}`, {  
+    fetch(`https://backporcionexacta-production.up.railway.app/api/recetas/getRecetaById?id=${id_receta}`, {  
         method: 'GET'   
     })  
         .then(response => {  
@@ -663,7 +663,7 @@ window.onload = function obtenerRecetas() {
     
     console.log(`ID del usuario: ${userId}`);
 
-    fetch(`http://localhost:8080/api/recetas/getRecetas?id_usuario=${userId}`, {  
+    fetch(`https://backporcionexacta-production.up.railway.app/api/recetas/getRecetas?id_usuario=${userId}`, {  
         method: 'GET'  // Aquí se especifica correctamente el método de la petición  
     })  
         .then(response => {  
