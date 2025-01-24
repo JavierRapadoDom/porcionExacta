@@ -32,7 +32,7 @@ function repositionAddRecipeCard() {
 
 
 function eliminarIngrediente(id, id_receta){
-    const url = 'https://backporcionexacta-production.up.railway.app:8080/api/ingredientes/delete?id_ingrediente=' + id;
+    const url = 'https://backporcionexacta-production.up.railway.app/api/ingredientes/delete?id_ingrediente=' + id;
         fetch(url, {  
             method: 'DELETE'
               
